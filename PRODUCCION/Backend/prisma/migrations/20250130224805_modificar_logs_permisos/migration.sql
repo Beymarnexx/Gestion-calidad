@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "Logs_Permissions" ADD COLUMN     "Descripcion" VARCHAR(255),
+ALTER COLUMN "idModulo" DROP NOT NULL,
+ALTER COLUMN "idModulo" SET DATA TYPE VARCHAR(255);
