@@ -152,6 +152,24 @@
       justify-content: space-between; /* Espacio entre los enlaces */
     }
   
+    .enlaces a {
+      color: #f7c600; /* Color amarillo */
+      text-decoration: none; /* Sin subrayado */
+      padding: 0 15px; /* Espacio entre los enlaces */
+    }
+  
+    .enlaces a:hover {
+      text-decoration: underline; /* Subrayado al pasar el mouse */
+    }
+  
+    /* Ajustes de responsividad */
+    @media screen and (max-width: 768px) {
+      .contenedor-olvide-contrasena {
+        max-width: 90%; /* Se adapta a pantallas pequeñas */
+        padding: 20px; /* Ajusta el padding para pantallas pequeñas */
+      }
+    }
+  </style>
   
 
   
