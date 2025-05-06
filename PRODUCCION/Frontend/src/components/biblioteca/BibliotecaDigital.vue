@@ -111,6 +111,15 @@ export default {
           fecha: '25/10/2024',
           autor: 'Dr. Roberto Sánchez',
           categoria: 'Enfermería'
+        },
+        {
+          id: 7,
+          titulo: 'Fundamentos éticos en la atención sanitaria',
+          descripcion: 'Exploración de principios éticos en enfermería y fisioterapia moderna.',
+          imagen: '/E7.jpg',
+          fecha: '8/11/2024',
+          autor: 'Dra. Cecilia Rojas',
+          categoria: 'Enfermería'
         }
       ],
       searchQuery: '',
