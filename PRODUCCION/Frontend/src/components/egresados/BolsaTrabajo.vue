@@ -64,6 +64,26 @@
                     <h2>Estabilidad Laboral</h2>
                     <p>Ofrecemos un ambiente de trabajo estable y seguro, comprometidos con el bienestar de nuestro equipo.</p>
                 </a>
+                <a href="/ofertas-laborales" class="benefit">
+                    <i class="fas fa-globe benefit-icon"></i>
+                    <h2>Oportunidades Internacionales</h2>
+                    <p>Conectamos a nuestro equipo con programas de intercambio, pasantías y experiencias globales.</p>
+                </a>
+                    <a href="/ofertas-laborales" class="benefit">
+                    <i class="fas fa-lightbulb benefit-icon"></i>
+                    <h2>Ambiente Innovador</h2>
+                    <p>Fomentamos la creatividad y el pensamiento disruptivo en un entorno de aprendizaje continuo.</p>
+                </a>
+                    <a href="/ofertas-laborales" class="benefit">
+                    <i class="fas fa-users benefit-icon"></i>
+                    <h2>Red Colaborativa</h2>
+                    <p>Trabajamos en equipo, construyendo relaciones sólidas entre departamentos y carreras.</p>
+                </a>
+                    <a href="/ofertas-laborales" class="benefit">
+                    <i class="fas fa-tree benefit-icon"></i>
+                    <h2>Compromiso Ambiental</h2>
+                    <p>Aplicamos prácticas sostenibles que cuidan del medio ambiente y fomentan la conciencia ecológica.</p>
+                </a>
             </div>
         </section>
     </div>
