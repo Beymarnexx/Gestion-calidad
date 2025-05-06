@@ -10,7 +10,7 @@
   <div class="content-info">
     <h1>Licenciatura en Enfermería</h1>
     <p>
-      La Licenciatura en Enfermería forma profesionales con las habilidades y conocimientos necesarios para cuidar la salud de quienes más lo necesitan. Estos estudiantes desarrollan un pensamiento crítico que les permite tomar decisiones efectivas en diversos escenarios de atención clínica, abordando problemas de salud con responsabilidad y compromiso.
+      La carrera de Licenciatura en Enfermería forma profesionales altamente capacitados en el cuidado integral de la salud, con una sólida base científica, técnica y humanística. El programa académico está diseñado para desarrollar competencias en la promoción, prevención, recuperación y rehabilitación de la salud en los distintos niveles del sistema sanitario. Además, se fomenta la investigación, la ética profesional y el compromiso social, preparando a los futuros licenciados para liderar procesos de atención clínica, educativa y comunitaria con responsabilidad, empatía y vocación de servicio.
     </p>
   </div>
   <div class="content-img">
