@@ -2,10 +2,9 @@
   <section class="testimonials">
     <div class="container">
       <h2>Lo que dicen nuestros estudiantes</h2>
-      <p class="description">
-        Experiencias de quienes han formado parte de nuestras carreras en el área de la salud.
-      </p>
-
+        <p class="description">
+          “Cada historia aquí es testimonio de vocación, esfuerzo y sueños cumplidos. Nuestros estudiantes transforman vidas, comenzando por la suya.”
+        </p>
       <div class="carousel">
         <button @click="prevSlide" class="carousel-control prev">&#10094;</button>
         <div class="carousel-track-container">
