@@ -117,6 +117,18 @@ export default {
         {
           texto: 'El ambiente de la Pastoral es acogedor y siempre nos motivan a ser mejores personas.',
           autor: 'Luis Gómez'
+        },
+        {
+          texto: 'Gracias a la Pastoral descubrí el valor del servicio comunitario y cómo puedo contribuir al bien común.',
+          autor: 'Andrea Ríos'
+        },
+        {
+          texto: 'La Pastoral me brindó espacios de reflexión que influyeron profundamente en mi crecimiento personal y espiritual.',
+          autor: 'Carlos Téllez'
+        },
+        {
+          texto: 'Participar en actividades de la Pastoral me dio la oportunidad de formar amistades con valores y propósitos comunes.',
+          autor: 'Valeria Muñoz'
         }
       ]
     };
