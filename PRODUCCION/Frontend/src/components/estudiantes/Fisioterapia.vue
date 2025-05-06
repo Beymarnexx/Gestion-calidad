@@ -112,7 +112,9 @@ export default {
         { title: "GRADO ACADÉMICO", icon: "/src/assets/iconos/publico.png", description: "LICENCIATURA" },
         { title: "DURACIÓN DE CARRERA", icon: "/src/assets/iconos/publico.png", description: "4 AÑOS" },
         { title: "AULAS Y LABORATORIOS", icon: "/src/assets/iconos/publico.png", description: "EQUIPADOS" },
-        { title: "MODELO DE CLASES", icon: "/src/assets/iconos/publico.png", description: "PRESENCIAL" }
+        { title: "MODELO DE CLASES", icon: "/src/assets/iconos/publico.png", description: "PRESENCIAL" },
+        { title: "TÍTULO OTORGADO", icon: "/src/assets/iconos/publico.png", description: "LICENCIADO(A) EN FISIOTERAPIA Y KINESIOLOGÍA" },
+        { title: "PRÁCTICAS PROFESIONALES", icon: "/src/assets/iconos/publico.png", description: "DESDE EL 7MO SEMESTRE EN CENTROS DE SALUD" }
       ]
     };
   },
