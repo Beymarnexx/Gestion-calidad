@@ -10,13 +10,28 @@
       <div class="contact-details">
         <h2>Información de Contacto</h2>
         <p>Si tienes alguna consulta o deseas obtener más información sobre nuestros programas, no dudes en ponerte en contacto con nosotros.</p>
+        <!-- Teléfono principal -->
         <div class="contact-item">
           <i class="fas fa-phone-alt"></i>
           <p><strong>Teléfono:</strong> +591 67304957</p>
         </div>
+
+        <!-- Teléfono adicional -->
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <p><strong>Teléfono adicional:</strong> +591 71500000</p>
+        </div>
+
+        <!-- Correo principal -->
         <div class="contact-item">
           <i class="fas fa-envelope"></i>
           <p><strong>Email:</strong> contacto@uacpucarani.edu.bo</p>
+        </div>
+
+        <!-- Correo adicional -->
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <p><strong>Email alternativo:</strong> informes@ucbpucarani.bo</p>
         </div>
         <div class="contact-item">
           <i class="fas fa-map-marker-alt"></i>
