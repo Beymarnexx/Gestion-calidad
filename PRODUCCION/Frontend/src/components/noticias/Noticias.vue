@@ -110,7 +110,17 @@ export default {
       carrerasData: [
         { carrera: 'Fisioterapia', inscritos: 400, titulados: 150 },
         { carrera: 'Kinesiología', inscritos: 300, titulados: 100 },
-        { carrera: 'Enfermería', inscritos: 500, titulados: 150 }
+        { carrera: 'Enfermería', inscritos: 500, titulados: 150 },
+        { carrera: 'Fisioterapia', inscritos: 400, titulados: 150 },
+        { carrera: 'Kinesiología', inscritos: 300, titulados: 100 },
+        { carrera: 'Enfermería', inscritos: 500, titulados: 150 },
+        { carrera: 'Nutrición', inscritos: 250, titulados: 90 },
+        { carrera: 'Psicología', inscritos: 350, titulados: 130 },
+        { carrera: 'Odontología', inscritos: 200, titulados: 75 },
+        { carrera: 'Tecnología Médica', inscritos: 180, titulados: 60 },
+        { carrera: 'Laboratorio Clínico', inscritos: 150, titulados: 55 },
+        { carrera: 'Farmacia', inscritos: 220, titulados: 80 },
+        { carrera: 'Bioquímica', inscritos: 190, titulados: 70 }
       ]
     };
   },
