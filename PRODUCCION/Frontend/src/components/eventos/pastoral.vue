@@ -194,4 +194,56 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   margin: 40px 0;
+}
 
+.image-card {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 15px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.materias-section,
+.testimonios-section,
+.contactos-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.materias-grid,
+.contactos-grid,
+.testimonios-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.materia-card,
+.contacto-card,
+.testimonio-card {
+  width: 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #00254e;
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonios-imagen img {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+</style>
