@@ -257,25 +257,3 @@ input[type="range"] {
   background-color: #003366;
 }
 
-.btn-download a {
-  color: white;
-  text-decoration: none;
-}
-
-.btn-download {
-  background-color: #0073e6;
-  color: white;
-  padding: 12px 25px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-  display: inline-block;
-}
-
-.btn-download:hover {
-  background-color: #005bb5;
-}
-</style>
