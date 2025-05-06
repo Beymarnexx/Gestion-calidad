@@ -131,47 +131,5 @@
   }
   
   .card {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card-img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .card-titulo {
-    font-size: 1.3rem;
-    color: #004080; /* Azul */
-    margin: 10px 0;
-  }
-  
-  .card-resumen {
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  /* Botón Leer más */
-  .button {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #FFCC00; /* Amarillo */
-    color: #082447; /* Azul */
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #082447; /* Azul */
-    color: #FFCC00; /* Amarillo */
-  }
-  </style>
+
   
