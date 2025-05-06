@@ -148,12 +148,22 @@
         </div>
         <div class="testimonios-list">
           <div class="testimonio">
-            <p>"La carrera de Enfermería me ha brindado la oportunidad de ayudar a las personas en momentos críticos."</p>
-            <h4>- Ana Pérez</h4>
+            <p>"El enfoque práctico de la carrera de Fisioterapia ha sido fundamental para mi formación."</p>
+            <h4>- Juan Martínez</h4>
           </div>
           <div class="testimonio">
-            <p>"Gracias a los profesores, me siento preparada para enfrentar cualquier desafío en el campo."</p>
-            <h4>- Luis Gómez</h4>
+            <p>"He aprendido técnicas valiosas que me ayudarán en mi carrera profesional."</p>
+            <h4>- María López</h4>
+          </div>
+          <!-- 👇 Testimonio nuevo -->
+          <div class="testimonio">
+            <p>"Gracias al apoyo docente, me siento seguro de aplicar mis conocimientos en cualquier entorno clínico."</p>
+            <h4>- Esteban Rivera</h4>
+          </div>
+          <!-- 👇 Otro testimonio nuevo -->
+          <div class="testimonio">
+            <p>"Los valores y la formación humana recibida en la UCB marcaron mi camino profesional."</p>
+            <h4>- Camila Fernández</h4>
           </div>
         </div>
       </div>
