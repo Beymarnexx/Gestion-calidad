@@ -116,7 +116,9 @@ export default {
       ],
       contactos: [
         { nombre: 'Lic. Carlos Rivera', cargo: 'Coordinador de Investigación', email: 'crivera@ucb.edu.bo' },
-        { nombre: 'Dr. Ana Sánchez', cargo: 'Jefa de Proyectos Científicos', email: 'asanchez@ucb.edu.bo' }
+        { nombre: 'Dr. Ana Sánchez', cargo: 'Jefa de Proyectos Científicos', email: 'asanchez@ucb.edu.bo' },
+        { nombre: 'M.Sc. Lucía Fernández', cargo: 'Especialista en Métodos Cuantitativos', email: 'lfernandez@ucb.edu.bo' },
+        { nombre: 'Ing. Marco Rojas', cargo: 'Asistente de Proyectos Tecnológicos', email: 'mrojas@ucb.edu.bo' }
       ]
     };
   }
