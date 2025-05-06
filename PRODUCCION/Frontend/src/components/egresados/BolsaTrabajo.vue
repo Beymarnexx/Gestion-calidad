@@ -210,4 +210,78 @@
     padding: 60px 20px;
     background: linear-gradient(135deg, #010250, #0a0b4f);
     color: #fff;
+}
 
+.benefits-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit {
+    background-color: #FFCF00;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: #010250;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.benefit:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.benefit h2 {
+    font-size: 1.6rem;
+    margin: 15px 0;
+}
+
+.benefit p {
+    font-size: 1rem;
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    color: #010250;
+    margin-bottom: 15px;
+    animation: pulse 1.8s infinite;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+</style>
