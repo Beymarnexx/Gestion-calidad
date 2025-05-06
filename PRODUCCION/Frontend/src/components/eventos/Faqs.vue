@@ -60,6 +60,28 @@
             </p>
           </div>
         </div>
+
+        <div class="faq-item" @click="toggleFaq(4)">
+          <h3 class="faq-question">
+            ¿Qué debo hacer si olvido mi contraseña del sistema académico? <span>{{ activeIndex === 4 ? '▲' : '▼' }}</span>
+          </h3>
+          <div class="faq-answer" :class="{ 'active': activeIndex === 4 }">
+            <p>
+              Puedes restablecer tu contraseña desde la página de acceso del sistema académico haciendo clic en “¿Olvidaste tu contraseña?” y siguiendo las instrucciones enviadas a tu correo institucional.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item" @click="toggleFaq(5)">
+          <h3 class="faq-question">
+            ¿Dónde puedo solicitar una constancia de estudios o matrícula? <span>{{ activeIndex === 5 ? '▲' : '▼' }}</span>
+          </h3>
+          <div class="faq-answer" :class="{ 'active': activeIndex === 5 }">
+            <p>
+              Debes ingresar al sistema académico y dirigirte a la sección “Trámites” para solicitar tu constancia. También puedes acercarte a la oficina de Registros Académicos.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </template>
