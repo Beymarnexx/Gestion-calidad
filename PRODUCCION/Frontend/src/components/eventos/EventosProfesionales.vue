@@ -1,7 +1,5 @@
 <template>
   <div>
-
-
     <!-- Contenido Principal -->
     <div class="content">
       <img src="@/assets/car.jpg" alt="Eventos" class="hero-image" />
@@ -11,7 +9,6 @@
         los eventos de actualización profesional que se realizan cada año. Los congresos y jornadas
         están enfocados en mejorar las competencias en áreas de la salud, incluyendo medicina y fisioterapia.
       </p>
-
       <h2>Próximos Congresos</h2>
       <div class="events-section">
         <div class="event-card" v-for="(event, index) in congresses" :key="index">
@@ -24,7 +21,6 @@
           </video>
         </div>
       </div>
-
       <h2>Jornadas Profesionales</h2>
       <div class="events-section">
         <div class="event-card" v-for="(event, index) in workshops" :key="index">
@@ -40,7 +36,6 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'EventosActualizacion',
@@ -78,13 +73,11 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 body {
   background-color: #eef2f3; /* Color de fondo suave */
   font-family: 'Arial', sans-serif;
 }
-
 /* Banner de Evento Destacado */
 .highlighted-event {
   position: relative;
@@ -93,18 +86,15 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
-
 .highlighted-image {
   width: 100%;
   max-width: 1200px;
   height: auto;
   transition: transform 0.3s;
 }
-
 .highlighted-image:hover {
   transform: scale(1.05);
 }
-
 .highlighted-title {
   position: absolute;
   top: 50%;
@@ -115,7 +105,6 @@ body {
   font-weight: bold;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
-
 .signup-button {
   display: inline-block;
   margin-top: 20px;
@@ -128,18 +117,15 @@ body {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
-
 .signup-button:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
 }
-
 /* Contenido Principal */
 .content {
   padding: 50px;
   text-align: center;
 }
-
 .hero-image {
   width: 80%;
   height: auto;
@@ -147,7 +133,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 h1 {
   margin-bottom: 30px;
   color: #007bff;
