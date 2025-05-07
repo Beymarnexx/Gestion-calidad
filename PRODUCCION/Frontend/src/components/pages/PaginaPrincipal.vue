@@ -4,7 +4,6 @@
     <div class="hero fade-in">
       <h1>Bienvenidos a Nuestra Universidad</h1>
     </div>
-
     <!-- Noticias -->
     <section class="noticiaS">
   <div class="title-notis">
@@ -27,7 +26,6 @@
         <a href="#">Leer Más</a>
       </div>
     </div>
-
     <!-- Noticia de Fisioterapia -->
     <div class="noti">
       <figure>
@@ -44,7 +42,6 @@
         <a href="#">Leer Más</a>
       </div>
     </div>
-
     <!-- Noticia adicional para Enfermería -->
     <div class="noti">
       <figure>
@@ -61,7 +58,6 @@
         <a href="#">Leer Más</a>
       </div>
     </div>
-
     <!-- Noticia adicional para Fisioterapia -->
     <div class="noti">
       <figure>
@@ -80,15 +76,10 @@
     </div>
   </div>
 </section>
-
-
     <!-- Nuestras Carreras -->
      <section class="carre">
       
     <h1>Nuestras carreras </h1>
-
-
-   
     <div class="cards-container">
 
     <div class="card-carreras">
