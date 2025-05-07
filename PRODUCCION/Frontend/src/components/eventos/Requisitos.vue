@@ -1,7 +1,6 @@
 <template>
   <div class="requisitos-container">
     <h1>Términos de Referencia (TDR)</h1>
-
     <!-- Objetivo -->
     <div class="card objetivo">
       <div class="card-icon">
@@ -14,7 +13,6 @@
         </p>
       </div>
     </div>
-
     <!-- Público Objetivo -->
     <div class="card publico">
       <div class="card-icon">
@@ -31,7 +29,6 @@
         </ul>
       </div>
     </div>
-
     <!-- Estructura y Funcionalidades -->
     <div class="card estructura">
       <div class="card-icon">
@@ -48,7 +45,6 @@
         </ul>
       </div>
     </div>
-
     <!-- Diseño UX -->
     <div class="card ux">
       <div class="card-icon">
@@ -61,7 +57,6 @@
         </p>
       </div>
     </div>
-
     <!-- Plazo de Entrega -->
     <div class="card plazo">
       <div class="card-icon">
@@ -74,7 +69,6 @@
         </p>
       </div>
     </div>
-
     <!-- Mantenimiento y Actualizaciones -->
     <div class="card mantenimiento">
       <div class="card-icon">
@@ -87,7 +81,6 @@
         </p>
       </div>
     </div>
-
     <!-- Consideraciones Legales -->
     <div class="card legales">
       <div class="card-icon">
@@ -102,35 +95,29 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'RequisitosPage',
 };
 </script>
-
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
-
 body {
   font-family: 'Playfair Display', serif;
   background-color: #f0f2f5;
 }
-
 .requisitos-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 30px;
 }
-
 h1 {
   text-align: center;
   color: #004080;
   font-size: 2.2rem;
   margin-bottom: 30px;
 }
-
 /* Estilos de las tarjetas con imágenes de fondo y colores personalizados */
 .card {
   display: flex;
@@ -145,12 +132,10 @@ h1 {
   position: relative;
   overflow: hidden;
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 /* Imagen de fondo en cada tarjeta */
 .card::before {
   content: '';
@@ -164,7 +149,6 @@ h1 {
   opacity: 0.1;
   z-index: 0;
 }
-
 /* Colores y fondos específicos para cada tarjeta */
 .objetivo::before { background-image: url('https://example.com/objetivo-bg.jpg'); }
 .publico::before { background-image: url('https://example.com/publico-bg.jpg'); }
@@ -173,7 +157,6 @@ h1 {
 .plazo::before { background-image: url('https://example.com/plazo-bg.jpg'); }
 .mantenimiento::before { background-image: url('https://example.com/mantenimiento-bg.jpg'); }
 .legales::before { background-image: url('https://example.com/legales-bg.jpg'); }
-
 /* Iconos coloridos */
 .card-icon {
   font-size: 2.5rem;
@@ -182,17 +165,14 @@ h1 {
   flex-shrink: 0;
   z-index: 1;
 }
-
 .card-content {
   z-index: 1;
 }
-
 .card-content h2 {
   color: #004080;
   font-size: 1.6rem;
   margin-bottom: 10px;
 }
-
 .card-content p,
 .card-content ul {
   margin: 0;
