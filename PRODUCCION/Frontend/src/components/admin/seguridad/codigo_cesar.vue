@@ -23,7 +23,6 @@
           <button type="submit" class="btn-submit">{{ action === 'encrypt' ? 'Cifrar' : 'Descifrar' }}</button>
         </form>
       </div>
-
       <div class="result-box">
         <div class="result">
           <h2>Texto {{ action === 'encrypt' ? 'Cifrado' : 'Descifrado' }}</h2>
@@ -43,7 +42,6 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -60,7 +58,6 @@ export default {
     processText() {
       // Generamos el alfabeto cifrado
       this.shiftedAlphabet = [...this.alphabet];
-      
       // Desplazar el alfabeto normal hacia adelante según el desplazamiento
       if (this.action === 'encrypt') {
         this.shiftedAlphabet = [...this.alphabet.slice(this.shift), ...this.alphabet.slice(0, this.shift)];
@@ -85,7 +82,6 @@ export default {
   }
 };
 </script>
-
 <style scoped>
 .page-container {
   display: flex;
