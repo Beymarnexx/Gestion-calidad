@@ -21,7 +21,6 @@
             <label>Propietario/Autorizador</label>
             <input type="text" v-model="newRecord.propietario" required />
           </div>
-
           <!-- Clasificación -->
           <div class="form-group">
             <label>Confidencialidad</label>
@@ -34,7 +33,6 @@
               Si esta información llegara a ser conocida por individuos no autorizados o incluso hecha pública. Afectación de procesos críticos, afectación legal, financiera, organizacional.
             </p>
           </div>
-
           <div class="form-group">
             <label>Integridad</label>
             <select v-model="newRecord.integridad" required>
@@ -46,7 +44,6 @@
               Si esta información llegara a ser indebida o inadecuadamente alterada, actualizada o modificada, ya sea intencionalmente o por accidente. Afectación de procesos críticos, afectación legal, financiera, organizacional.
             </p>
           </div>
-
           <div class="form-group">
             <label>Disponibilidad</label>
             <select v-model="newRecord.disponibilidad" required>
@@ -58,11 +55,9 @@
               Si esta información llegara a no estar disponible permanentemente o por un periodo considerable de tiempo. Afectación de procesos críticos, afectación legal, financiera, organizacional.
             </p>
           </div>
-
           <button type="submit" class="btn-submit">{{ editIndex === null ? 'Añadir Registro' : 'Actualizar Registro' }}</button>
         </form>
       </div>
-
       <!-- Tabla de registros -->
       <div class="table-container">
         <h2>Registros Guardados</h2>
@@ -103,7 +98,6 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -166,7 +160,6 @@ export default {
   }
 };
 </script>
-
 <style scoped>
 .page-container {
   font-family: Arial, sans-serif;
