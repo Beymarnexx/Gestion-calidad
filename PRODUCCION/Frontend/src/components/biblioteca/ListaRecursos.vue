@@ -19,7 +19,6 @@
         <button class="delete-button" @click="deleteResource(resource.idRecurso)">Eliminar</button>
       </div>
     </div>
-
     <!-- Modal de Edición -->
     <div v-if="isEditModalOpen" class="modal-overlay">
       <div class="modal">
@@ -29,22 +28,18 @@
             <label for="Titulo">Título:</label>
             <input type="text" id="Titulo" v-model="editForm.Titulo" />
           </div>
-
           <div class="form-group">
             <label for="Autor">Autor:</label>
             <input type="text" id="Autor" v-model="editForm.Autor" />
           </div>
-
           <div class="form-group">
             <label for="Tipo">Tipo:</label>
             <input type="text" id="Tipo" v-model="editForm.Tipo" />
           </div>
-
           <div class="form-group">
             <label for="Categoria">Categoría:</label>
             <input type="text" id="Categoria" v-model="editForm.Categoria" />
           </div>
-
           <div class="form-group">
             <label for="Portada">Portada:</label>
             <input type="file" id="Portada" @change="handleFileUpload('Portada')" />
@@ -55,12 +50,10 @@
               class="preview-image" 
             />
           </div>
-
           <div class="form-group">
             <label for="ArchivoPDF">Archivo PDF:</label>
             <input type="file" id="ArchivoPDF" @change="handleFileUpload('ArchivoPDF')" />
           </div>
-
           <div class="modal-buttons">
             <button type="submit" class="save-button">Guardar</button>
             <button type="button" class="cancel-button" @click="closeEditModal">Cancelar</button>
@@ -70,7 +63,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import axios from "axios";
 
@@ -148,7 +140,6 @@ export default {
       if (this.editForm.ArchivoPDF) {
         formData.append("ArchivoPDF", this.editForm.ArchivoPDF);
       }
-
       try {
         const response = await axios.put(
           `http://localhost:3001/api/recursos/edit/${this.editForm.idRecurso}`,
@@ -182,7 +173,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 /* Contenedor principal */
 .resource-list {
@@ -192,7 +182,6 @@ export default {
   flex-wrap: wrap;
   gap: 1.5rem;
 }
-
 /* Título principal */
 .title {
   width: 100%;
@@ -201,7 +190,6 @@ export default {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-
 /* Mensaje de no recursos */
 .no-resources {
   font-size: 1.2rem;
@@ -209,7 +197,6 @@ export default {
   text-align: center;
   width: 100%;
 }
-
 /* Tarjetas de recursos */
 .card {
   border: 1px solid #ddd;
@@ -223,7 +210,6 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-
 /* Imagen de la tarjeta */
 .card-image {
   width: 100%;
@@ -231,27 +217,23 @@ export default {
   object-fit: cover;
   border-radius: 5px;
 }
-
 /* Títulos y texto */
 .card-title {
   font-size: 1.2rem;
   color: #333;
   margin: 1rem 0 0.5rem;
 }
-
 .card-info {
   font-size: 1rem;
   color: #666;
   margin: 0.3rem 0;
 }
-
 /* Botones dentro de la tarjeta */
 .card-buttons {
   margin-top: 1rem;
   display: flex;
   gap: 0.5rem;
 }
-
 .edit-button,
 .delete-button {
   padding: 0.6rem 1rem;
@@ -261,23 +243,19 @@ export default {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 .edit-button {
   background-color: #4caf50;
   color: white;
 }
-
 .delete-button {
   background-color: #f44336;
   color: white;
 }
-
 .edit-button:hover,
 .delete-button:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
-
 /* Superposición del modal */
 .modal-overlay {
   position: fixed;
@@ -291,7 +269,6 @@ export default {
   align-items: center;
   z-index: 1000;
 }
-
 /* Contenedor del modal */
 .modal {
   background: #ffffff;
@@ -301,7 +278,6 @@ export default {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   animation: fadeIn 0.3s ease;
 }
-
 /* Animación de entrada */
 @keyframes fadeIn {
   from {
@@ -313,14 +289,12 @@ export default {
     transform: translateY(0);
   }
 }
-
 /* Botones del modal */
 .modal-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 1.5rem;
 }
-
 .save-button,
 .cancel-button {
   padding: 0.6rem 1.2rem;
@@ -328,12 +302,10 @@ export default {
   border-radius: 4px;
   cursor: pointer;
 }
-
 .save-button {
   background-color: #4caf50;
   color: white;
 }
-
 .cancel-button {
   background-color: #f44336;
   color: white;
