@@ -1,10 +1,8 @@
 <template>
     <div class="admin-dashboard">
       <h1 class="welcome-message">🗑️ Eliminar Rol</h1>
-  
       <div class="admin-info">
         <h2>🔍 Buscar Rol</h2>
-        
         <!-- 🔍 Barra de búsqueda -->
         <input
           type="text"
@@ -12,9 +10,7 @@
           placeholder="Escribe un nombre de rol para buscar..."
           class="search-bar"
         />
-  
         <h2>📋 Lista de Roles</h2>
-  
         <table class="admin-info-table" v-if="roles.length > 0">
           <thead>
             <tr>
@@ -38,14 +34,11 @@
             </tr>
           </tbody>
         </table>
-  
         <p v-else class="no-data">❌ No hay roles registrados.</p>
-
         <!-- ✅ Mensaje de Éxito -->
         <div v-if="mensajeExito" class="success-message">
           ✅ {{ mensajeExito }}
         </div>
-  
         <!-- ❌ Mensaje de Error -->
         <div v-if="mensajeError" class="error-message">
           ❌ {{ mensajeError }}
@@ -53,7 +46,6 @@
       </div>
     </div>
 </template>
-  
 <script>
 import axios from "axios";
 
@@ -79,7 +71,6 @@ export default {
         async cargarRoles() {
             try {
                 const response = await axios.get("http://localhost:3001/api/rol/all", { withCredentials: true });
-
                 console.log("📩 Roles recibidos:", response.data);
 
                 // Ajustar si la API devuelve un array directo o un objeto con la clave "roles"
@@ -94,14 +85,12 @@ export default {
                 console.error("❌ Error obteniendo roles:", error);
             }
         },
-
         // ⚠️ Confirmación antes de eliminar
         confirmarEliminar(rol) {
             if (confirm(`⚠️ ¿Seguro que quieres eliminar el rol "${rol.Nombre}"?`)) {
                 this.eliminarRol(rol.idRol);
             }
         },
-
         // 🗑️ Eliminar rol
         async eliminarRol(idRol) {
             try {
@@ -112,7 +101,6 @@ export default {
                 console.log("✅ Rol eliminado correctamente.");
                 this.mensajeExito = "Rol eliminado correctamente.";
                 this.mensajeError = "";
-
                 // 🔄 Refrescar lista de roles
                 await this.cargarRoles();
             } catch (error) {
@@ -126,10 +114,8 @@ export default {
     }
 };
 </script>
-  
 <style scoped>
 @import "@/assets/adminStyles.css";
-
 /* 🔍 Estilo de la barra de búsqueda */
 .search-bar {
     width: 100%;
@@ -139,7 +125,6 @@ export default {
     border-radius: 5px;
     margin-bottom: 15px;
 }
-
 /* 🗑️ Estilo del botón eliminar */
 .delete-button {
     background-color: #ff4d4d;
@@ -150,11 +135,9 @@ export default {
     border-radius: 5px;
     transition: 0.3s;
 }
-
 .delete-button:hover {
     background-color: #cc0000;
 }
-
 /* ❌ Estilo para cuando no hay datos */
 .no-data {
     text-align: center;
