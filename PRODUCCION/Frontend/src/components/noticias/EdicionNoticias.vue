@@ -313,3 +313,52 @@
   width: 100%;
   padding: 6px 10px; /* Reducido el padding */
   margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem; /* Tamaño de fuente ajustado */
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px; /* Ajustado el tamaño mínimo del textarea */
+}
+
+.edit-form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.edit-form-buttons button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-form-buttons button.save {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.edit-form-buttons button.cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Estilos adicionales para el overlay y el cierre */
+.edit-form-overlay {
+  z-index: 9999;
+}
+
+.edit-form-overlay .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+  </style>
+  
