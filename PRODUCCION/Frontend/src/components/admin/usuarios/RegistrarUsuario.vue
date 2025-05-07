@@ -46,7 +46,6 @@
       <div v-if="mensajeExito" class="success-message">
         ✅ {{ mensajeExito }}
       </div>
-
       <!-- ❌ Mensaje de Error -->
       <div v-if="mensajeError" class="error-message">
         ❌ {{ mensajeError }}
@@ -54,7 +53,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import axios from "axios";
 export default {
@@ -84,7 +82,6 @@ export default {
     async obtenerPersonasDisponibles() {
       try {
         const response = await axios.get("http://localhost:3001/api/persona/all", { withCredentials: true });
-
         console.log("📩 Personas recibidas:", response.data);
         // Verificar si response.data contiene un array de personas
         if (Array.isArray(response.data)) {
@@ -98,7 +95,6 @@ export default {
         console.error("❌ Error obteniendo personas disponibles:", error);
       }
     },
-
     validarContrasena() {
       const password = this.usuario.Contrasenia;
       this.validaLongitud = password.length >= 12;
@@ -106,7 +102,6 @@ export default {
       this.validaNumero = /[0-9]/.test(password);
       this.validaEspecial = /[\W_]/.test(password);
     },
-
     async registrarUsuario() {
       if (!this.validacionCompleta || this.usuario.Contrasenia !== this.confirmarContrasena) {
         this.mensajeError = "⚠️ Corrige los errores antes de registrar.";
@@ -118,11 +113,9 @@ export default {
         console.log("✅ Usuario registrado:", response.data);
         this.mensajeExito = "Usuario registrado correctamente.";
         this.mensajeError = "";
-
         // Limpiar formulario
         this.usuario = { idPersona: null, Nombre_usuario: "", Contrasenia: "" };
         this.confirmarContrasena = "";
-
         setTimeout(() => (this.mensajeExito = ""), 3000);
         this.obtenerPersonasDisponibles(); // Actualizar lista
       } catch (error) {
@@ -137,7 +130,6 @@ export default {
   }
 };
 </script>
-
 <style scoped>
   @import "@/assets/adminStyles.css";
 .success-message {
