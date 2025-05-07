@@ -4,7 +4,7 @@
   
       <div class="admin-info">
         <h2>🔎 Seleccionar Rol</h2>
-  
+
         <!-- Selección de Rol -->
         <div class="form-group">
           <label>Seleccionar Rol</label>
@@ -15,33 +15,28 @@
             </option>
           </select>
         </div>
-  
+
         <h2>📋 Datos del Rol</h2>
-  
         <form @submit.prevent="actualizarRol" class="edit-form">
           <!-- Nombre del Rol -->
           <div class="form-group">
             <label>Nombre del Rol</label>
             <input v-model="rol.Nombre" type="text" required />
           </div>
-  
           <!-- Descripción del Rol -->
           <div class="form-group">
             <label>Descripción</label>
             <input v-model="rol.descripcionRol" type="text" required />
           </div>
-  
           <!-- Botón de Actualizar -->
           <button class="save-button" type="submit">
             Actualizar Rol
           </button>
         </form>
-  
         <!-- ✅ Mensaje de Éxito -->
         <div v-if="mensajeExito" class="success-message">
           ✅ {{ mensajeExito }}
         </div>
-  
         <!-- ❌ Mensaje de Error -->
         <div v-if="mensajeError" class="error-message">
           ❌ {{ mensajeError }}
@@ -49,7 +44,6 @@
       </div>
     </div>
   </template>
-  
   <script>
   import axios from "axios";
   
@@ -89,7 +83,6 @@
           console.warn("⚠️ No se ha seleccionado ningún rol.");
           return;
         }
-  
         console.log(`📥 Cargando datos para rol con ID: ${this.rolSeleccionado}`);
   
         try {
@@ -109,17 +102,14 @@
           this.mensajeError = "❌ No se encontró el rol seleccionado.";
         }
       },
-  
       async actualizarRol() {
         if (!this.rol.idRol) {
           console.error("❌ No se ha asignado correctamente el ID del rol.");
           this.mensajeError = "⚠️ No se ha seleccionado un rol válido.";
           return;
         }
-  
         try {
           console.log(`📤 Enviando actualización para ID: ${this.rol.idRol}`);
-  
           await axios.put(`http://localhost:3001/api/rol/${this.rol.idRol}`, this.rol, { withCredentials: true });
   
           console.log("✅ Rol actualizado:", this.rol);
@@ -139,10 +129,8 @@
     }
   };
   </script>
-  
   <style scoped>
   @import "@/assets/adminStyles.css";
-  
   .success-message {
     margin-top: 15px;
     padding: 10px;
