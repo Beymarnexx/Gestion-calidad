@@ -14,7 +14,40 @@
           </select>
         </div>
   
-ar ? '✅' : '❌' }}</td>
+        <!-- Selección de Módulo -->
+        <h2>📂 Seleccionar Módulo</h2>
+        <div class="form-group">
+          <select v-model="moduloSeleccionado" @change="aplicarFiltro">
+            <option disabled value="">Seleccione un módulo...</option>
+            <option v-for="modulo in modulos" :key="modulo.idModulo" :value="modulo.Nombre">
+              {{ modulo.Nombre }}
+            </option>
+          </select>
+        </div>
+  
+        <!-- Tabla de Permisos -->
+        <h2>📋 Permisos Asignados</h2>
+        <table class="permissions-table">
+          <thead>
+            <tr>
+              <th>ID Permiso</th>
+              <th>Módulo</th>
+              <th>Usuario</th>
+              <th>Crear</th>
+              <th>Leer</th>
+              <th>Actualizar</th>
+              <th>Eliminar</th>
+              <th>Reportes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="permiso in permisosFiltrados" :key="permiso.idPermiso">
+              <td>{{ permiso.idPermiso }}</td>
+              <td>{{ obtenerNombreModulo(permiso.idModulo) }}</td>
+              <td>{{ obtenerNombreUsuario(permiso.idUsuarioRol) }}</td>
+              <td>{{ permiso.Crear ? '✅' : '❌' }}</td>
+              <td>{{ permiso.Leer ? '✅' : '❌' }}</td>
+              <td>{{ permiso.Actualizar ? '✅' : '❌' }}</td>
               <td>{{ permiso.Eliminar ? '✅' : '❌' }}</td>
               <td>{{ permiso.Reportes ? '✅' : '❌' }}</td>
             </tr>
