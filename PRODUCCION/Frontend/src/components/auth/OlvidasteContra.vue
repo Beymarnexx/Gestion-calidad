@@ -22,19 +22,15 @@
       </div>
     </div>
   </template>
-  
-
   <script>
   export default {
     methods: {
       enviarEnlaceRestablecimiento() {
         const correo = document.getElementById('correo').value;
-  
         if (!correo) {
           alert('Por favor, ingresa tu correo electrónico.');
           return false;
         }
-  
         // Lógica para enviar el enlace de restablecimiento de contraseña
         alert('Te hemos enviado un enlace para restablecer tu contraseña.');
       }
@@ -51,7 +47,6 @@
       background-color: #001f3f; /* Fondo azul oscuro de la página */
       font-family: Arial, sans-serif;
     }
-  
     /* Estilos del contenedor del formulario */
     .contenedor-olvide-contrasena {
       background-color: #00274a; /* Azul oscuro */
@@ -65,14 +60,12 @@
       margin: auto; /* Margen automático para centrar */
       text-align: center; /* Centrado del texto */
     }
-  
     /* Estilos del logo */
     .logo {
       max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor */
       height: auto; /* Mantiene la relación de aspecto */
       margin-bottom: 20px; /* Espacio debajo del logo */
     }
-  
     /* Estilos del formulario */
     form legend {
       font-size: 24px; /* Texto más pequeño */
@@ -82,7 +75,6 @@
       margin-bottom: 20px;
       animation: desvanecerTexto 1.5s ease-in-out; /* Animación del texto */
     }
-  
     @keyframes desvanecerTexto {
       0% {
         opacity: 0;
@@ -91,19 +83,16 @@
         opacity: 1;
       }
     }
-  
     /* Estilos de las instrucciones */
     .instrucciones {
       margin-bottom: 20px;
       font-size: 14px;
       color: #f7c600;
     }
-  
     /* Estilos del campo */
     .campo {
       margin-top: 20px;
     }
-  
     .campo input {
       width: 100%;
       padding: 10px; /* Ajuste en el padding */
@@ -113,16 +102,13 @@
       box-sizing: border-box;
       transition: all 0.3s ease; /* Transición para interacción */
     }
-  
     .campo input:focus {
       outline: 2px solid #f7c600; /* Amarillo */
       transform: scale(1.02); /* Aumenta un poco el tamaño */
     }
-  
     .campo-boton {
       margin-top: 20px; /* Espacio antes del botón */
     }
-  
     .campo-boton button {
       background-color: #f7c600; /* Amarillo */
       color: #00274a; /* Azul oscuro */
@@ -134,16 +120,13 @@
       width: 100%;
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
-  
     .campo-boton button:hover {
       background-color: #d1a700; /* Tonalidad más oscura de amarillo */
       transform: scale(1.05); /* Aumenta un poco el tamaño */
     }
-  
     .campo-boton button:active {
       transform: scale(1); /* Regresa a su tamaño normal cuando se presiona */
     }
-  
     /* Estilos de los enlaces */
     .enlaces {
       margin: 30px 0px; /* Espacio arriba y abajo de los enlaces */
@@ -151,17 +134,14 @@
       display: flex; /* Usamos flexbox para distribuir los enlaces */
       justify-content: space-between; /* Espacio entre los enlaces */
     }
-  
     .enlaces a {
       color: #f7c600; /* Color amarillo */
       text-decoration: none; /* Sin subrayado */
       padding: 0 15px; /* Espacio entre los enlaces */
     }
-  
     .enlaces a:hover {
       text-decoration: underline; /* Subrayado al pasar el mouse */
     }
-  
     /* Ajustes de responsividad */
     @media screen and (max-width: 768px) {
       .contenedor-olvide-contrasena {
