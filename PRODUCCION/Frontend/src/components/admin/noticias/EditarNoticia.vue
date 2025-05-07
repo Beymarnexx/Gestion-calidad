@@ -12,18 +12,15 @@
               </option>
             </select>
           </div>
-  
           <div v-if="noticia.titulo">
             <div class="campo">
               <label>Título:</label>
               <input type="text" v-model="noticia.titulo" required />
             </div>
-  
             <div class="campo">
               <label>Contenido:</label>
               <textarea v-model="noticia.contenido" required></textarea>
             </div>
-  
             <div class="campo">
               <label>Categoría:</label>
               <select v-model="noticia.categoria" required>
@@ -33,26 +30,21 @@
                 <option>Comunicados</option>
               </select>
             </div>
-  
             <div class="campo">
               <label>Fecha de Publicación:</label>
               <input type="date" v-model="noticia.fecha_publicacion" required />
             </div>
-  
             <div class="campo">
               <label>Actualizar Imagen:</label>
               <input type="file" @change="procesarImagen" accept="image/*" />
             </div>
-  
             <button type="submit">💾 Guardar Cambios</button>
-  
             <p v-if="mensaje" class="mensaje">{{ mensaje }}</p>
           </div>
         </form>
       </div>
     </div>
   </template>
-  
   <script>
   export default {
     data() {
@@ -101,7 +93,6 @@
     background: url('../../assets/fondo.jpg') no-repeat center center/cover;
     padding: 20px;
   }
-  
   /* Tarjeta de formulario */
   .form-card {
     background: rgba(255, 255, 255, 0.9);
@@ -113,7 +104,6 @@
     text-align: center;
     animation: fadeIn 0.5s ease-in-out;
   }
-  
   /* Animación de entrada */
   @keyframes fadeIn {
     from {
@@ -125,27 +115,23 @@
       transform: translateY(0);
     }
   }
-  
   /* Títulos */
   h1 {
     font-size: 1.8rem;
     color: #2c3e50;
     margin-bottom: 20px;
   }
-  
   /* Campos del formulario */
   .campo {
     margin-bottom: 15px;
     text-align: left;
   }
-  
   .campo label {
     display: block;
     font-weight: bold;
     color: #34495e;
     margin-bottom: 5px;
   }
-  
   input,
   textarea,
   select {
@@ -156,14 +142,12 @@
     font-size: 1rem;
     transition: 0.3s ease-in-out;
   }
-  
   input:focus,
   textarea:focus,
   select:focus {
     border-color: #2980b9;
     outline: none;
   }
-  
   /* Botón */
   button {
     width: 100%;
@@ -177,11 +161,9 @@
     cursor: pointer;
     transition: 0.3s;
   }
-  
   button:hover {
     background: #2980b9;
   }
-  
   /* Mensaje de confirmación */
   .mensaje {
     margin-top: 15px;
