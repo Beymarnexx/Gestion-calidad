@@ -7,7 +7,6 @@
             <label for="Titulo">Título</label>
             <input type="text" v-model="form.Titulo" required placeholder="Escribe el título de la noticia" />
           </div>
-  
           <div class="form-group">
             <label for="Contenido">Contenido</label>
             <textarea
@@ -18,17 +17,14 @@
               class="content-textarea"
             ></textarea>
           </div>
-  
           <div class="form-group">
             <label for="Fecha_publicacion">Fecha de Publicación</label>
             <input type="date" v-model="form.Fecha_publicacion" required />
           </div>
-  
           <div class="form-group">
             <label for="Categoria">Categoría</label>
             <input type="text" v-model="form.Categoria" required placeholder="Categoría de la noticia" />
           </div>
-  
           <div class="form-group">
             <label for="Imagen">Imagen</label>
             <input type="file" @change="handleFileUpload" />
@@ -37,21 +33,17 @@
               <img :src="imagePreview" alt="Imagen seleccionada" />
             </div>
           </div>
-  
           <div class="form-group">
             <label for="Autor">Autor</label>
             <input type="text" v-model="form.Autor" placeholder="Nombre del autor" />
           </div>
-  
           <button type="submit">Añadir Noticia</button>
         </form>
       </div>
     </div>
   </template>
-  
   <script>
   import axios from "axios";
-  
   export default {
     data() {
       return {
@@ -73,19 +65,16 @@
           this.imagePreview = URL.createObjectURL(this.form.Imagen); // Generar vista previa de la imagen
         }
       },
-  
       submitForm() {
         // Validación de campos requeridos
         if (!this.form.Contenido || !this.form.Titulo || !this.form.Fecha_publicacion || !this.form.Categoria) {
           alert("Todos los campos son obligatorios");
           return;
         }
-  
         const formData = new FormData();
         for (const key in this.form) {
           formData.append(key, this.form[key]);
         }
-  
         axios
           .post("http://localhost:3001/noticias/add", formData, {
             headers: { "Content-Type": "multipart/form-data" },
@@ -100,7 +89,6 @@
             alert("Error al añadir noticia.");
           });
       },
-  
       clearForm() {
         // Limpiar todos los campos del formulario
         this.form.Titulo = "";
@@ -119,7 +107,6 @@
     },
   };
   </script>
-  
   <style lang="scss">
   .add-news {
     display: flex;
@@ -127,7 +114,6 @@
     padding: 20px;
     min-height: 100vh;
     background-color: #f0f0f0;
-  
     .form-container {
       max-width: 800px;
       width: 100%;
@@ -138,17 +124,14 @@
       border-radius: 10px;
       transition: all 0.3s ease;
     }
-  
     h1 {
       font-size: 2.2rem;
       font-weight: 600;
       color: #333;
       margin-bottom: 30px;
     }
-  
     .form-group {
       margin-bottom: 20px;
-  
       label {
         display: block;
         margin-bottom: 8px;
@@ -156,7 +139,6 @@
         font-size: 1rem;
         color: #333;
       }
-  
       input,
       textarea {
         width: 100%;
@@ -168,20 +150,17 @@
         transition: all 0.3s ease;
         background-color: #f9f9f9;
       }
-  
       input:focus,
       textarea:focus {
         border-color: #007bff;
         background-color: #f1faff;
         outline: none;
       }
-  
       textarea {
         resize: none;
         transition: background-color 0.3s ease;
       }
     }
-  
     button {
       width: 100%;
       padding: 12px 16px;
@@ -194,7 +173,6 @@
       transition: all 0.3s ease;
       box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
     }
-  
     button:hover {
       background-color: #0056b3;
       box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
@@ -210,17 +188,14 @@
         border-radius: 8px;
       }
     }
-  
     @media (max-width: 768px) {
       .form-container {
         margin-left: 0;
         padding: 20px;
       }
-  
       h1 {
         font-size: 1.8rem;
       }
-  
       button {
         font-size: 1rem;
       }
