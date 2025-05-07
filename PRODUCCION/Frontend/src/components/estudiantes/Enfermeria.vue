@@ -17,7 +17,6 @@
     <img src="@/assets/FOTOS SELEC UAC PUCARANI/FOTOS ENFERMERIA/20241005_102709.jpg" alt="Imagen de Enfermería">
   </div>
 </section>
-
     <section class="mas-info">
       <div class="content-img2">
         <img width="90px" src="@/assets/Pucarani/ENFERMERIA/IMG_20241019_150252.jpg" alt="Imagen de enfermeria">
@@ -66,7 +65,6 @@
     </section>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -104,7 +102,6 @@ export default {
     content: "Para inscribirse en la carrera de Enfermería, se requiere haber culminado los estudios de secundaria, presentar certificado de nacimiento, cédula de identidad, dos fotografías tamaño carnet y cumplir con una entrevista de admisión. Es recomendable tener un interés genuino por el cuidado de la salud y el bienestar de las personas."
   }
 ],
-
       careerInfo: [
         { title: "GRADO ACADÉMICO", icon: "/src/assets/iconos/publico.png", description: "LICENCIATURA" },
         { title: "DURACIÓN DE CARRERA", icon: "/src/assets/iconos/publico.png", description: "4 AÑOS" },
@@ -140,13 +137,11 @@ body {
   align-items: center;
   overflow: hidden;
 }
-
 .banner-enfermeria img {
   width: 100%;
   height: auto;
   filter: brightness(0.5); /* Oscurece la imagen para mejor visibilidad del texto */
 }
-
 .banner-title {
   position: absolute;
   top: 50%;
@@ -164,30 +159,24 @@ body {
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  
   border-radius: 10px;
-  
   text-align: center; /* Centra el texto dentro del div */
 }
-
 .content-info h1 {
   font-size: 2em;
   margin-bottom: 15px;
   color: #2c3e50;
 }
-
 .content-info p {
   font-size: 1em;
   line-height: 1.6;
   color: #34495e;
 }
-
 .content-img {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-
 .content-img img {
   width: 100%;
   height: auto;
@@ -200,13 +189,11 @@ body {
     flex-direction: row;
     text-align: left; /* Para pantallas grandes, el texto se alinea a la izquierda */
   }
-
   .content-info,
   .content-img {
     flex: 1;
   }
 }
-
 .mas-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
