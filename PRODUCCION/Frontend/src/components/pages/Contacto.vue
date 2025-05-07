@@ -5,7 +5,6 @@
       <img src="@/assets/Pucarani/INFRAESTRUCTURA/PANO_20241010_113630.jpg" alt="Banner de contacto">
       <h1 class="contact-title">Contacto - UAC Pucarani</h1>
     </section>
-
     <section class="contact-info">
       <div class="contact-details">
         <h2>Información de Contacto</h2>
@@ -27,7 +26,6 @@
           <i class="fas fa-envelope"></i>
           <p><strong>Email:</strong> contacto@uacpucarani.edu.bo</p>
         </div>
-
         <!-- Correo adicional -->
         <div class="contact-item">
           <i class="fas fa-envelope"></i>
@@ -40,7 +38,6 @@
       </div>
       <!--mapa-->
     </section>
-
     <!-- Formulario de Contacto en Tarjeta -->
     <section class="contact-form">
       <div class="contact-form-card">
@@ -76,8 +73,6 @@
     </iframe>
   </div>
 </section>
-
-
     <!-- WhatsApp -->
     <section class="whatsapp-contact">
       <a href="https://api.whatsapp.com/send/?phone=%2B59167304957&text&type=phone_number&app_absent=0" class="btn-wsp" target="_blank" rel="noopener noreferrer">
@@ -87,7 +82,6 @@
     </section>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -118,7 +112,6 @@ body {
   background-color: #f8f8f8;
   color: #333;
 }
-
 /* Sección del Banner de Contacto */
 .contact-banner {
   position: relative;
@@ -129,14 +122,12 @@ body {
   background-color: #08346d;
   color: white;
 }
-
 .contact-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.5); /* Oscurece la imagen para mejorar la visibilidad del texto */
 }
-
 .contact-title {
   position: absolute;
   top: 50%;
@@ -147,26 +138,22 @@ body {
   text-align: center;
   z-index: 1;
 }
-
 .contact-info {
   padding: 40px;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
-
 .contact-details h2 {
   color: #08346d;
   font-size: 2em;
   margin-bottom: 20px;
 }
-
 .contact-item {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
-
 .contact-item i {
   font-size: 1.5em;
   color: #08346d;
