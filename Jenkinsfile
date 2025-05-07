@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         NODE_ENV = 'production'
-        DEPLOY_DIR = 'C:\\deploy\\frontend' // Cambia esta ruta si lo deseas
+        DEPLOY_DIR = 'C:\\deploy\\frontend' // Cambiar si es necesario
     }
 
     stages {
@@ -16,7 +16,11 @@ pipeline {
         stage('Instalar dependencias') {
             steps {
                 dir('PRODUCCION/Frontend') {
-                    bat 'npm install'
+                    bat '''
+                        if exist node_modules rmdir /s /q node_modules
+                        if exist package-lock.json del package-lock.json
+                        npm install
+                    '''
                 }
             }
         }
