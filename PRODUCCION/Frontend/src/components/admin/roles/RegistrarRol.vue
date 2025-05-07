@@ -1,10 +1,8 @@
 <template>
   <div class="admin-dashboard">
     <h1 class="welcome-message">⚖️ Registrar Rol</h1>
-
     <div class="admin-info">
       <h2>📋 Datos del Rol</h2>
-
       <form @submit.prevent="registrarRol" class="edit-form">
         <!-- 🏷 Datos del Rol -->
         <h3>📄 Información del Rol</h3>
@@ -16,17 +14,14 @@
           <label>Descripción</label>
           <textarea v-model="rol.descripcionRol" rows="3" required></textarea>
         </div>
-
         <button class="save-button" type="submit">
           Registrar Rol
         </button>
       </form>
-
       <!-- ✅ Mensaje de Éxito -->
       <div v-if="mensajeExito" class="success-message">
         ✅ {{ mensajeExito }}
       </div>
-
       <!-- ❌ Mensaje de Error -->
       <div v-if="mensajeError" class="error-message">
         ❌ {{ mensajeError }}
@@ -34,10 +29,8 @@
     </div>
   </div>
 </template>
-
 <script>
 import axios from "axios";
-
 export default {
   data() {
     return {
@@ -57,20 +50,16 @@ export default {
           this.rol,
           { withCredentials: true }
         );
-
         if (response.status === 201 || response.status === 200) {
           console.log("✅ Rol registrado. ID:", response.data.rol?.idRol || "Desconocido");
-
           // Mostrar mensaje de éxito
           this.mensajeExito = "✅ Rol registrado correctamente.";
           this.mensajeError = "";
-
           // Limpiar formulario
           this.rol = {
             Nombre: "",
             descripcionRol: "",
           };
-
           // Ocultar mensaje después de 3 segundos
           setTimeout(() => {
             this.mensajeExito = "";
@@ -80,16 +69,13 @@ export default {
         }
       } catch (error) {
         console.error("❌ Error al registrar rol:", error);
-
         // Si ya se creó el rol, evitar mostrar error innecesario
         if (error.response?.status === 409) {
           this.mensajeError = "⚠️ El rol ya existe.";
         } else {
           this.mensajeError = error.response?.data?.error || "⚠️ Error al registrar el rol.";
         }
-
         this.mensajeExito = "";
-
         // Ocultar mensaje de error después de 5 segundos
         setTimeout(() => {
           this.mensajeError = "";
@@ -99,10 +85,8 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 @import "@/assets/adminStyles.css";
-
 .success-message {
   margin-top: 15px;
   padding: 10px;
@@ -111,7 +95,6 @@ export default {
   border: 1px solid #c3e6cb;
   border-radius: 5px;
 }
-
 .error-message {
   margin-top: 15px;
   padding: 10px;
