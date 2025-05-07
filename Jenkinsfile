@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         NODE_ENV = 'production'
-        DEPLOY_DIR = 'C:\\deploy\\frontend' // Cambia si tu carpeta destino es otra
+        DEPLOY_DIR = 'C:\\deploy\\frontend' // Puedes cambiar esta ruta si tu destino es otro
     }
 
     stages {
@@ -28,7 +28,7 @@ pipeline {
         stage('Construir proyecto') {
             steps {
                 dir('PRODUCCION/Frontend') {
-                    bat 'vite build'
+                    bat '"C:\\Users\\Rodrigo Edgar Tarifa\\AppData\\Roaming\\npm\\vite.cmd" build'
                 }
             }
         }
