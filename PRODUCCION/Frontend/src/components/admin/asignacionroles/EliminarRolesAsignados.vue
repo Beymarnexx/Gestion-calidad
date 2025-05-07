@@ -1,10 +1,8 @@
 <template>
     <div class="admin-dashboard">
         <h1 class="welcome-message">🗑️ Eliminar Rol Asignado</h1>
-
         <div class="admin-info">
             <h2>🔍 Buscar Usuario</h2>
-            
             <!-- 🔍 Barra de búsqueda -->
             <input
                 type="text"
@@ -12,9 +10,7 @@
                 placeholder="Escribe un nombre de usuario para buscar..."
                 class="search-bar"
             />
-
             <h2>📋 Lista de Roles Asignados</h2>
-
             <table class="admin-info-table" v-if="rolesAsignados.length > 0">
                 <thead>
                     <tr>
@@ -38,14 +34,11 @@
                     </tr>
                 </tbody>
             </table>
-
             <p v-else class="no-data">❌ No hay roles asignados registrados.</p>
-
             <!-- ✅ Mensaje de Éxito -->
             <div v-if="mensajeExito" class="success-message">
                 ✅ {{ mensajeExito }}
             </div>
-
             <!-- ❌ Mensaje de Error -->
             <div v-if="mensajeError" class="error-message">
                 ❌ {{ mensajeError }}
@@ -53,10 +46,8 @@
         </div>
     </div>
 </template>
-
 <script>
 import axios from "axios";
-
 export default {
     data() {
         return {
@@ -79,9 +70,7 @@ export default {
         async cargarRolesAsignados() {
             try {
                 const response = await axios.get("http://localhost:3001/api/usuariorol/all", { withCredentials: true });
-
                 console.log("📩 Roles asignados recibidos:", response.data);
-
                 if (Array.isArray(response.data)) {
                     this.rolesAsignados = response.data; 
                 } else if (response.data.rolesAsignados && Array.isArray(response.data.rolesAsignados)) {
@@ -93,14 +82,12 @@ export default {
                 console.error("❌ Error obteniendo roles asignados:", error);
             }
         },
-
         // ⚠️ Confirmación antes de eliminar
         confirmarEliminar(asignacion) {
             if (confirm(`⚠️ ¿Seguro que quieres eliminar el rol "${asignacion.Rol.Nombre}" del usuario "${asignacion.Usuario.Nombre_usuario}"?`)) {
                 this.eliminarRolAsignado(asignacion.idUsuarioRol);
             }
         },
-
         // 🗑️ Eliminar rol asignado
         async eliminarRolAsignado(idUsuarioRol) {
             try {
@@ -111,7 +98,6 @@ export default {
                 console.log("✅ Rol asignado eliminado correctamente.");
                 this.mensajeExito = "Rol asignado eliminado correctamente.";
                 this.mensajeError = "";
-
                 // 🔄 Refrescar lista de roles asignados
                 await this.cargarRolesAsignados();
             } catch (error) {
@@ -125,10 +111,8 @@ export default {
     }
 };
 </script>
-
 <style scoped>
 @import "@/assets/adminStyles.css";
-
 /* 🔍 Estilo de la barra de búsqueda */
 .search-bar {
     width: 100%;
@@ -138,7 +122,6 @@ export default {
     border-radius: 5px;
     margin-bottom: 15px;
 }
-
 /* 🗑️ Estilo del botón eliminar */
 .delete-button {
     background-color: #ff4d4d;
@@ -149,11 +132,9 @@ export default {
     border-radius: 5px;
     transition: 0.3s;
 }
-
 .delete-button:hover {
     background-color: #cc0000;
 }
-
 /* ❌ Estilo para cuando no hay datos */
 .no-data {
     text-align: center;
@@ -161,7 +142,6 @@ export default {
     font-size: 1.2em;
     margin-top: 20px;
 }
-
 /* ✅ Mensaje de éxito */
 .success-message {
     margin-top: 15px;
@@ -171,7 +151,6 @@ export default {
     border: 1px solid #c3e6cb;
     border-radius: 5px;
 }
-
 /* ❌ Mensaje de error */
 .error-message {
     margin-top: 15px;
