@@ -5,7 +5,6 @@
       <img src="@/assets/egresado.png" alt="Banner de egresados">
     </div>
   </div>
-
   <section class="mensaje">
     <div class="msj">
       <h1>
@@ -13,7 +12,6 @@
       </h1>
     </div>
   </section>
-
   <section class="block-container">
     <div class="block-1">
       <h1>¿Qué es el Portal de Egresados(as)?</h1>
@@ -25,7 +23,6 @@
       <img src="@/assets/info.png" alt="Información sobre el portal">
     </div>
   </section>
-
   <!-- Nuevo formulario de inicio de sesión -->
   <section class="login-section">
     <div class="login-container">
@@ -56,7 +53,6 @@
     </div>
   </section>
 </template>
-
 <style scoped>
 /* Banner y mensaje */
 .banner-container {
@@ -67,7 +63,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .banner {
   position: relative;
   width: 100%;
@@ -76,13 +71,11 @@
   justify-content: center;
   align-items: center;
 }
-
 .banner img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-
 .banner h1 {
   position: absolute;
   color: white;
@@ -91,14 +84,12 @@
   z-index: 1;
   left: 10%;
 }
-
 .mensaje {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
-
 .msj h1 {
   font-size: 20px;
   color: #333;
@@ -106,7 +97,6 @@
   text-align: center;
   margin: 0;
 }
-
 /* Bloque de información */
 .block-container {
   display: flex;
@@ -115,55 +105,46 @@
   padding: 2rem;
   gap: 2rem;
 }
-
 .block-1 {
   flex: 2;
   max-width: 600px;
 }
-
 .block-1 h1 {
   font-size: 32px;
   color: #0056b3;
   margin-bottom: 1rem;
   text-decoration: underline;
 }
-
 .block-1 p {
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
 }
-
 .block-2 {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .block-2 img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
-
 @media (max-width: 768px) {
   .block-container {
     flex-direction: column;
     text-align: center;
   }
-
   .block-1, .block-2 {
     max-width: 100%;
     padding: 1rem;
   }
-
   .block-2 img {
     max-width: 80%;
     margin-top: 1rem;
   }
 }
-
 /* Nuevo estilo del login */
 .login-section {
   display: flex;
@@ -172,7 +153,6 @@
   min-height: 100vh;
   padding: 20px;
 }
-
 .login-container {
   display: flex;
   justify-content: space-between;
@@ -184,18 +164,15 @@
   max-width: 900px;
   gap: 20px; /* Espacio entre el formulario y la imagen */
 }
-
 .login-box {
   flex: 1;
 }
-
 .login-image-container {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .login-image {
   max-width: 100%;
   border-radius: 8px;
@@ -206,18 +183,15 @@ h1 {
   color: #0056b3;
   margin-bottom: 20px;
 }
-
 .input-group {
   margin-bottom: 15px;
 }
-
 .input-group label {
   display: block;
   font-size: 1rem;
   color: #333;
   margin-bottom: 5px;
 }
-
 .login-input {
   width: 100%;
   padding: 12px;
@@ -225,27 +199,22 @@ h1 {
   font-size: 1rem;
   box-sizing: border-box;
 }
-
 .login-input:focus {
   border-color: #0056b3;
   outline: none;
   box-shadow: 0 0 8px rgba(0, 86, 179, 0.2);
 }
-
 .forgot-password-container {
   text-align: right;
 }
-
 .forgot-password {
   font-size: 0.9rem;
   color: #0056b3;
   text-decoration: none;
 }
-
 .forgot-password:hover {
   text-decoration: underline;
 }
-
 .login-button {
   width: 100%;
   padding: 12px;
@@ -258,20 +227,16 @@ h1 {
   transition: background-color 0.3s ease;
   margin-top: 15px;
 }
-
 .login-button:hover {
   background-color: #004494;
 }
-
 .login-button:active {
   background-color: #003366;
 }
-
 @media (max-width: 768px) {
   .login-container {
     flex-direction: column;
   }
-
   .login-image {
     margin-top: 20px;
   }
