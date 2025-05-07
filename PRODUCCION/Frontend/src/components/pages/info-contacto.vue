@@ -67,7 +67,40 @@
           </div>
 
           <!-- Sección para Subir PDFs -->
+          <div class="upload-section">
+            <h2>Subir Documento Del Libro en PDF</h2>
+            <form @submit.prevent="uploadPdf">
+              <label for="pdfUpload">Seleccionar PDF:</label>
+              <input type="file" id="pdfUpload" @change="onFileChange" accept=".pdf" required />
+              <button type="submit">Subir PDF</button>
+            </form>
+            <div v-if="uploadMessage" class="upload-message">{{ uploadMessage }}</div>
+          </div>
+        </section>
+      </main>
+    </div>
 
+    <!-- Nueva Sección de Vista Previa del Dashboard y Botón de Acceso -->
+    <div class="dashboard-section">
+      <!-- Card de Vista Previa del Dashboard -->
+      <div class="dashboard-preview-card">
+        <h3>Vista Previa del Dashboard</h3>
+        <div class="preview-cards">
+          <div class="card" v-for="(item, index) in previewItems" :key="index">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón de Acceso al Dashboard -->
+      <div class="access-dashboard">
+        <button @click="navigateToDashboard" class="access-button">
+          Acceder al Dashboard Universitario
+        </button>
+      </div>
+    </div>
+  </div>
 </template>
   
   <script>
