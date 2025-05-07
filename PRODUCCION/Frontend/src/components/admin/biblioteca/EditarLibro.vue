@@ -2,7 +2,6 @@
     <div class="contenedor">
       <div class="recurso-card">
         <h1>✏️ Editar Recurso Académico</h1>
-  
         <form @submit.prevent="actualizarRecurso">
           <div class="campo">
             <label>Seleccionar Recurso:</label>
@@ -13,18 +12,15 @@
               </option>
             </select>
           </div>
-  
           <div v-if="recurso.titulo">
             <div class="campo">
               <label>Título:</label>
               <input type="text" v-model="recurso.titulo" required />
             </div>
-  
             <div class="campo">
               <label>Autor:</label>
               <input type="text" v-model="recurso.autor" required />
             </div>
-  
             <div class="campo">
               <label>Tipo:</label>
               <select v-model="recurso.tipo" required>
@@ -34,7 +30,6 @@
                 <option>Otro</option>
               </select>
             </div>
-  
             <div class="campo">
               <label>Categoría:</label>
               <select v-model="recurso.categoria" required>
@@ -44,26 +39,21 @@
                 <option>Matemáticas</option>
               </select>
             </div>
-  
             <div class="campo">
               <label>Actualizar Portada:</label>
               <input type="file" @change="procesarPortada" accept="image/*" />
             </div>
-  
             <div class="campo">
               <label>Actualizar Archivo:</label>
               <input type="file" @change="procesarArchivo" accept=".pdf,.doc,.docx" />
             </div>
-  
             <button type="submit" class="boton-guardar">💾 Guardar Cambios</button>
-  
             <p v-if="mensaje" :class="['mensaje', mensajeTipo]">{{ mensaje }}</p>
           </div>
         </form>
       </div>
     </div>
   </template>
-  
   <script>
   export default {
     data() {
@@ -110,7 +100,6 @@
     }
   };
   </script>
-  
   <style scoped>
   /* 🔹 Contenedor */
   .contenedor {
@@ -121,7 +110,6 @@
     background: url('../../assets/fondo-biblioteca.jpg') no-repeat center center/cover;
     padding: 20px;
   }
-  
   /* 🔹 Card estilizada */
   .recurso-card {
     background: rgba(255, 255, 255, 0.95);
@@ -133,7 +121,6 @@
     text-align: center;
     animation: fadeIn 0.5s ease-in-out;
   }
-  
   /* 🔹 Animación */
   @keyframes fadeIn {
     from {
@@ -145,19 +132,16 @@
       transform: translateY(0);
     }
   }
-  
   /* 🔹 Campos del formulario */
   .campo {
     margin: 15px 0;
   }
-  
   label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: #2c3e50;
   }
-  
   input, select {
     width: 100%;
     padding: 10px;
@@ -165,7 +149,6 @@
     border: 1px solid #bdc3c7;
     font-size: 1rem;
   }
-  
   /* 🔹 Botón de guardar cambios */
   .boton-guardar {
     background: #27ae60;
@@ -178,11 +161,9 @@
     width: 100%;
     transition: background 0.3s ease-in-out;
   }
-  
   .boton-guardar:hover {
     background: #219150;
   }
-  
   /* 🔹 Mensajes */
   .mensaje {
     margin-top: 15px;
@@ -192,7 +173,6 @@
   .exito {
     color: #27ae60;
   }
-  
   .error {
     color: #e74c3c;
   }
