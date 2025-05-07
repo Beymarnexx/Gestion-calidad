@@ -169,65 +169,7 @@ export default {
     }
 
     /* Estilos del formulario */
-    form legend {
-        font-size: 24px; /* Texto más pequeño */
-        font-weight: bold;
-        color: #f7c600; /* Amarillo */
-        text-align: center;
-        margin-bottom: 20px;
-        animation: desvanecerTexto 1.5s ease-in-out; /* Animación del texto */
-    }
-
-    @keyframes desvanecerTexto {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    .campo {
-        margin-top: 20px;
-    }
-
-    .campo input {
-        width: 100%;
-        padding: 10px; /* Ajuste en el padding */
-        border: none;
-        border-radius: 5px;
-        margin-top: 10px;
-        box-sizing: border-box;
-        transition: all 0.3s ease; /* Transición para interacción */
-    }
-
-    .campo input:focus {
-        outline: 2px solid #f7c600; /* Amarillo */
-        transform: scale(1.02); /* Aumenta un poco el tamaño */
-    }
-
-    .campo-boton {
-        margin-top: 20px; /* Espacio antes del botón */
-    }
-
-    .campo-boton button {
-        background-color: #f7c600; /* Amarillo */
-        color: #00274a; /* Azul oscuro */
-        border: none;
-        padding: 12px 20px;
-        border-radius: 5px;
-        font-size: 18px;
-        cursor: pointer;
-        width: 100%;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .campo-boton button:hover {
-        background-color: #d1a700; /* Tonalidad más oscura de amarillo */
-        transform: scale(1.05); /* Aumenta un poco el tamaño */
-    }
-
-    .campo-boton button:active {
+    form l
         transform: scale(1); /* Regresa a su tamaño normal cuando se presiona */
     }
 
