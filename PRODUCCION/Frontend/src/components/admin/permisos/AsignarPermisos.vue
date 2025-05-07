@@ -174,21 +174,7 @@ export default {
 }
 
 .permissions-table th,
-.permissions-table td {
-  padding: 12px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
 
-.permissions-table th {
-  background: #002f5b;
-  color: white;
-}
-
-/* 📌 Estilos de Mensajes */
-.error-message {
-  color: red;
-  font-size: 0.9em;
 }
 
 .success-message {
