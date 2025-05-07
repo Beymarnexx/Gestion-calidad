@@ -215,4 +215,85 @@ input, textarea {
 }
 
 textarea {
+  resize: vertical;
+}
 
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #08346d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #0c5a8f;
+}
+
+/* Animación de desvanecimiento para el formulario */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* WhatsApp Button */
+.whatsapp-contact {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.btn-wsp {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-wsp:hover {
+  background-color: #128c7e;
+}
+/**mapa */
+.mapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 800px; /* Ancho máximo para una buena presentación en pantallas grandes */
+  border-radius: 12px;
+  overflow: hidden;
+ 
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  border-radius: 12px; /* Bordes redondeados */
+}
+
+</style>
