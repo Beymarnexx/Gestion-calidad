@@ -77,18 +77,14 @@
     </div>
   </footer>
 </template>
-
 <script>
 import { RouterLink } from 'vue-router';
-
 export default {
   name: 'Footer',
 };
 </script>
-
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
 .footer {
   background-color: #002244; /* Azul oscuro */
   color: white;
@@ -96,14 +92,12 @@ export default {
   font-family: 'Playfair Display', serif;
   position: relative;
 }
-
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: stretch; /* Alinear a lo largo del eje vertical */
   text-align: left;
 }
-
 .footer-left {
   flex: 1;
   max-width: 30%;
@@ -111,7 +105,6 @@ export default {
   border-right: 1px solid #ccc;
   padding-right: 20px; /* Agregar espacio a la derecha */
 }
-
 .footer-center {
   flex: 1;
   max-width: 30%;
@@ -119,50 +112,41 @@ export default {
   border-right: 1px solid #ccc;
   padding-right: 40px; /* Agregar espacio a la derecha */
 }
-
 .footer-right {
   flex: 1;
   max-width: 30%;
   text-align: center;
 }
-
 .footer-logo {
   width: 400px;
   margin-top: 50px;
   margin-bottom: 5px;
   
 }
-
 .footer-slogan {
   font-weight: 600;
   font-size: 1.2rem;
   margin-bottom: 5px;
 }
-
 .social-icons {
   margin-top: 15px;
   margin-left: 90px;
 }
-
-
 .social-icon {
   width: 40px;
   margin-right: 45px;
   transition: transform 0.3s ease; /* Mantener la transición de transform */
 }
-
 .social-icon:hover {
   transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
   filter: brightness(0.8); /* Reduce el brillo */
 }
-
 .whatsapp-icons {
   display: flex;
   justify-content: center;
   margin: -100px 0 -40px 0; /* Ajustar margen para centrar verticalmente */
   padding-bottom: 90px;
 }
-
 .whatsapp-link {
   display: flex;
   flex-direction: column; /* Para apilar la imagen y la descripción */
@@ -171,21 +155,17 @@ export default {
   text-decoration: none; /* Quitar subrayado */
   color: white; /* Color de texto de la descripción */
 }
-
 .whatsapp-icon {
   width: 40px; /* Tamaño de las imágenes de WhatsApp */
   transition: transform 0.3s ease; /* Animación para el hover */
 }
-
 .whatsapp-link:hover .whatsapp-icon {
   transform: scale(1.2); /* Aumentar tamaño al hacer hover */
 }
-
 .whatsapp-description {
   font-size: 0.8rem; /* Tamaño de la fuente de la descripción */
   margin-top: 6px; /* Espaciado entre icono y descripción */
 }
-
 .facebook{
   display: flex;
   justify-content: space-around;
@@ -198,8 +178,6 @@ export default {
   margin-top: 20px;
   text-align: center;
 }
-
-
 .facebook p{
   text-align: center;
   margin: 0 15px; /* Espaciado entre los dos enlaces de Facebook */
