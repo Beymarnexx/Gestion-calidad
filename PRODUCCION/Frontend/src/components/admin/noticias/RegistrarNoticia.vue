@@ -7,12 +7,10 @@
             <label>Título:</label>
             <input type="text" v-model="noticia.titulo" placeholder="Ingrese el título de la noticia" required />
           </div>
-  
           <div class="campo">
             <label>Contenido:</label>
             <textarea v-model="noticia.contenido" placeholder="Escriba el contenido aquí..." required></textarea>
           </div>
-  
           <div class="campo">
             <label>Categoría:</label>
             <select v-model="noticia.categoria" required>
@@ -23,25 +21,20 @@
               <option>Comunicados</option>
             </select>
           </div>
-  
           <div class="campo">
             <label>Fecha de Publicación:</label>
             <input type="date" v-model="noticia.fecha_publicacion" required />
           </div>
-  
           <div class="campo">
             <label>Imagen:</label>
             <input type="file" @change="procesarImagen" accept="image/*" />
           </div>
-  
           <button type="submit">📤 Publicar Noticia</button>
-  
           <p v-if="mensaje" class="mensaje">{{ mensaje }}</p>
         </form>
       </div>
     </div>
   </template>
-  
   <script>
   export default {
     data() {
@@ -68,7 +61,6 @@
     },
   };
   </script>
-  
   <style scoped>
   /* Contenedor principal centrado */
   .contenedor {
@@ -79,7 +71,6 @@
     background: url('../../assets/fondo.jpg') no-repeat center center/cover;
     padding: 20px;
   }
-  
   /* Tarjeta de formulario */
   .form-card {
     background: rgba(255, 255, 255, 0.9);
@@ -134,14 +125,12 @@
     font-size: 1rem;
     transition: 0.3s ease-in-out;
   }
-  
   input:focus,
   textarea:focus,
   select:focus {
     border-color: #2980b9;
     outline: none;
   }
-  
   /* Botón */
   button {
     width: 100%;
@@ -155,11 +144,9 @@
     cursor: pointer;
     transition: 0.3s;
   }
-  
   button:hover {
     background: #2980b9;
   }
-  
   /* Mensaje de confirmación */
   .mensaje {
     margin-top: 15px;
