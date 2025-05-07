@@ -1,4 +1,104 @@
+<template>
+  <div class="page-container">
+    <!-- Aquí va tu navbar, que debe estar fuera del contenedor del formulario -->
+    <nav class="navbar">
+      
+      <!-- Coloca aquí el contenido de tu barra de navegación -->
+    </nav>
 
+    <!-- Contenedor del formulario que ocupa el espacio restante en pantalla -->
+    <div class="background-overlay">
+      <div class="beca-container">
+        <h1>Solicitud de Beca</h1>
+        
+        <form @submit.prevent="enviarFormulario" class="beca-form">
+          <!-- Nombre Completo -->
+          <div class="form-group">
+            <label for="nombre">Nombre Completo</label>
+            <input 
+              type="text" 
+              id="nombre" 
+              v-model="nombre" 
+              placeholder="Ingresa tu nombre completo" 
+              required
+            />
+          </div>
+
+          <!-- Correo Electrónico -->
+          <div class="form-group">
+            <label for="correo">Correo Electrónico</label>
+            <input 
+              type="email" 
+              id="correo" 
+              v-model="correo" 
+              placeholder="Ingresa tu correo" 
+              required
+            />
+          </div>
+
+          <!-- Programa de Estudio -->
+          <div class="form-group">
+            <label for="programa">Programa de Estudio</label>
+            <select id="programa" v-model="programa" required>
+              <option disabled value="">Selecciona un programa</option>
+              <option value="Fisioterapia">Fisioterapia</option>
+              <option value="Enfermería">Enfermería</option>
+            </select>
+          </div>
+
+          <!-- Nivel de Necesidad -->
+          <div class="form-group">
+            <label for="necesidad">Nivel de Necesidad Financiera</label>
+            <input 
+              type="range" 
+              id="necesidad" 
+              v-model="necesidad" 
+              min="1" 
+              max="10" 
+              step="1" 
+              list="tickmarks"
+            />
+            <datalist id="tickmarks">
+              <option value="1" label="1"></option>
+              <option value="2"></option>
+              <option value="3" label="3"></option>
+              <option value="4"></option>
+              <option value="5" label="5"></option>
+              <option value="6"></option>
+              <option value="7" label="7"></option>
+              <option value="8"></option>
+              <option value="9"></option>
+              <option value="10" label="10"></option>
+            </datalist>
+            <p>Nivel: {{ necesidad }}</p>
+          </div>
+
+          <!-- Comentarios Adicionales -->
+          <div class="form-group">
+            <label for="comentarios">Comentarios Adicionales</label>
+            <textarea 
+              id="comentarios" 
+              v-model="comentarios" 
+              placeholder="Explica brevemente por qué solicitas esta beca"
+            ></textarea>
+          </div>
+
+          <!-- Botón de Envío -->
+          <button type="submit" class="btn-submit">Enviar Solicitud</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      nombre: '',
+      correo: '',
+      programa: '',
+      necesidad: 5,
       comentarios: ''
     };
   },
