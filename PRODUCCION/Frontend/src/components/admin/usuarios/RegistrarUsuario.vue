@@ -1,10 +1,8 @@
 <template>
   <div class="admin-dashboard">
     <h1 class="welcome-message">📝 Registrar Usuario</h1>
-
     <div class="admin-info">
       <h2>📋 Datos del Usuario</h2>
-
       <form @submit.prevent="registrarUsuario" class="edit-form">
         <!-- 🔎 Selección de Persona -->
         <div class="form-group">
@@ -16,13 +14,11 @@
             </option>
           </select>
         </div>
-
         <!-- 📛 Nombre de Usuario -->
         <div class="form-group">
           <label>Nombre de Usuario</label>
           <input v-model="usuario.Nombre_usuario" type="text" required />
         </div>
-
         <!-- 🔒 Contraseña -->
         <div class="form-group">
           <label>Contraseña</label>
@@ -32,7 +28,6 @@
           <small :class="{ 'error-message': !validaNumero }">🔢 Al menos un número</small>
           <small :class="{ 'error-message': !validaEspecial }">🔣 Al menos un carácter especial</small>
         </div>
-
         <!-- 🔑 Confirmar Contraseña -->
         <div class="form-group">
           <label>Confirmar Contraseña</label>
@@ -47,7 +42,6 @@
           Registrar Usuario
         </button>
       </form>
-
       <!-- ✅ Mensaje de Éxito -->
       <div v-if="mensajeExito" class="success-message">
         ✅ {{ mensajeExito }}
@@ -63,7 +57,6 @@
 
 <script>
 import axios from "axios";
-
 export default {
   data() {
     return {
@@ -93,7 +86,6 @@ export default {
         const response = await axios.get("http://localhost:3001/api/persona/all", { withCredentials: true });
 
         console.log("📩 Personas recibidas:", response.data);
-
         // Verificar si response.data contiene un array de personas
         if (Array.isArray(response.data)) {
           this.personasDisponibles = response.data;
@@ -121,10 +113,8 @@ export default {
         setTimeout(() => (this.mensajeError = ""), 5000);
         return;
       }
-
       try {
         const response = await axios.post("http://localhost:3001/api/usuario/register", this.usuario, { withCredentials: true });
-
         console.log("✅ Usuario registrado:", response.data);
         this.mensajeExito = "Usuario registrado correctamente.";
         this.mensajeError = "";
@@ -150,7 +140,6 @@ export default {
 
 <style scoped>
   @import "@/assets/adminStyles.css";
-
 .success-message {
   margin-top: 15px;
   padding: 10px;
@@ -159,7 +148,6 @@ export default {
   border: 1px solid #c3e6cb;
   border-radius: 5px;
 }
-
 .error-message {
   margin-top: 15px;
   padding: 10px;
