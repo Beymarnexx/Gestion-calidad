@@ -6,7 +6,6 @@
                 <h1>Módulo de Normativas y Reglamentos</h1>
             </div>
         </section>
-
         <section class="sec-intro">
             <div class="info-block">
                 <div class="intro-1">
@@ -21,7 +20,6 @@
                 </div>
             </div>
         </section>
-
         <section class="modulos">
             <div class="modulo-container">
                 <div class="modulo-1">
@@ -53,7 +51,6 @@
                 </div>
             </div>
         </section>
-
         <section class="reglamentos">
             <div class="reglamentos-container">
                 <div class="reglamento-1">
@@ -65,21 +62,17 @@
                             <img src="/src/assets/pdf.png" alt="pdf">
                             <a href="#" class="reglamento-boton" download="Reglamento_Academico.pdf">Reglamento Académico</a>
                         </div>
-
                         <div class="reglamento-item">
                             <img src="/src/assets/pdf.png" alt="pdf">
                             <a href="#" class="reglamento-boton" download="Reglamento_Convivencia.pdf">Reglamento de Convivencia</a>
                         </div>
-
                         <div class="reglamento-item">
                             <img src="/src/assets/pdf.png" alt="pdf">
                             <a href="#" class="reglamento-boton" download="Reglamento_Administrativo.pdf">Reglamento Administrativo</a>
                         </div>
                     </div>
-
                     <p>Es importante familiarizarse con estos reglamentos para garantizar un desarrollo armónico de las actividades académicas y administrativas dentro de nuestra comunidad universitaria.</p>
                 </div>
-
                 <div class="reglamento-2">
                     <img src="/src/assets/regla.jpg" alt="imagen de reglamento">
                 </div>
@@ -87,24 +80,20 @@
         </section>
     </div>
 </template>
-
 <style scoped>
 /* Añadir espacio entre secciones */
 section {
     margin-bottom: 40px; /* Ajusta el valor según el espacio que necesites */
 }
-
 .sec-banner {
     position: relative;
     text-align: center;
     margin-bottom: 40px; /* Espacio debajo del banner */
 }
-
 .banner img {
     width: 100%;
     height: auto;
 }
-
 .banner h1 {
     position: absolute;
     top: 50%;
@@ -115,7 +104,6 @@ section {
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
 /* Estilo para las secciones */
 .reglamentos-container,
 .modulo-container {
@@ -124,41 +112,35 @@ section {
     gap: 20px; /* Espacio entre los bloques */
     align-items: start;
 }
-
 .reglamento-1, .reglamento-2,
 .modulo-1, .modulo-2 {
     padding: 20px;
     border-radius: 5px;
 }
-
 .reglamento-2 img,
 .modulo-2 img {
     width: 100%;
     height: auto;
     border-radius: 5px;
 }
-
 .reglamento-grid,
 .modulo-grid {
     display: grid;  
     grid-template-columns: 1fr;
     gap: 15px;
 }
-
 .reglamento-item,
 .modulo-item {
     display: flex;
     align-items: center;
     gap: 10px; /* Espacio entre la imagen y el texto */
 }
-
 .reglamento-item img,
 .modulo-item img {
     width: 40px; /* Tamaño pequeño y profesional para el icono PDF */
     height: auto;
     border-radius: 5px;
 }
-
 .reglamento-boton,
 .modulo-boton {
     display: block;
@@ -170,12 +152,10 @@ section {
     transition: background-color 0.3s ease;
     width: 100%;
 }
-
 .reglamento-boton:hover,
 .modulo-boton:hover {
     background-color: #000b2b;
 }
-
 /* Asegurar que en pantallas más pequeñas los bloques se adapten */
 @media (max-width: 768px) {
     .modulo-container,
@@ -183,5 +163,4 @@ section {
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     }
 }
-
 </style>
