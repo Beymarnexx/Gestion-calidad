@@ -4,7 +4,6 @@
 
     <div class="admin-info">
       <h2>🔎 Seleccionar Usuario</h2>
-
       <!-- Selección de Usuario -->
       <div class="form-group">
         <label>Seleccionar Usuario</label>
@@ -25,7 +24,6 @@
           <label>Nombre de Usuario</label>
           <input v-model="usuario.Nombre_usuario" type="text" readonly class="input-bloqueado" />
         </div>
-
         <!-- Estado Bloqueado -->
         <div class="form-group">
           <label>Estado</label>
@@ -34,18 +32,15 @@
             <option :value="true">⛔ Bloqueado</option>
           </select>
         </div>
-
         <!-- Botón de Actualizar -->
         <button class="save-button" type="submit">
           Actualizar Usuario
         </button>
       </form>
-
       <!-- ✅ Mensaje de Éxito -->
       <div v-if="mensajeExito" class="success-message">
         ✅ {{ mensajeExito }}
       </div>
-
       <!-- ❌ Mensaje de Error -->
       <div v-if="mensajeError" class="error-message">
         ❌ {{ mensajeError }}
@@ -53,7 +48,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import axios from "axios";
 
@@ -116,7 +110,6 @@ export default {
         this.mensajeError = "❌ No se encontró el usuario seleccionado.";
       }
     },
-
     // 📤 Actualizar Usuario
     async actualizarUsuario() {
       if (!this.usuario.idUsuario) {
@@ -127,13 +120,11 @@ export default {
 
       try {
         console.log(`📤 Enviando actualización para ID: ${this.usuario.idUsuario}`);
-
         // ✅ Enviar solo los campos que pueden ser editados
         const datosActualizados = {
           Nombre_usuario: this.usuario.Nombre_usuario,
           Bloqueado: this.usuario.Bloqueado
         };
-
         await axios.put(`http://localhost:3001/api/usuario/${this.usuario.idUsuario}`, datosActualizados, { withCredentials: true });
 
         console.log("✅ Usuario actualizado:", this.usuario);
@@ -153,10 +144,8 @@ export default {
   }
 };
 </script>
-
 <style scoped>
 @import "@/assets/adminStyles.css";
-
 /* 🔹 Estilo para hacer que el campo de usuario sea no editable y gris */
 .input-bloqueado {
   background-color: #ccc;
@@ -165,7 +154,6 @@ export default {
   pointer-events: none;
   border: 1px solid #aaa;
 }
-
 /* ✅ Mensaje de éxito */
 .success-message {
   margin-top: 15px;
@@ -175,7 +163,6 @@ export default {
   border: 1px solid #c3e6cb;
   border-radius: 5px;
 }
-
 /* ❌ Mensaje de error */
 .error-message {
   margin-top: 15px;
