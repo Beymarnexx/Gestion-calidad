@@ -123,43 +123,7 @@ export default {
 
 .enlaces a:not(.btn-iniciar-sesion):not(.submenu a)::after {
   content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background-color: #ffcc00;
-  transition: width 0.3s;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-}
 
-.enlaces a:not(.btn-iniciar-sesion):not(.submenu a):hover::after {
-  width: 100%; /* Efecto de línea en hover solo para enlaces principales */
-}
-
-.submenu a::after {
-  display: none;
-}
-
-.enlaces a:hover,
-.no-clic:hover {
-  color: #ffcc00;
-}
-
-.no-clic {
-  cursor: default;
-  display: flex;
-  align-items: center;
-}
-
-.no-clic .arrow-down {
-  margin-left: 5px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-  transition: transform 0.3s;
 }
 
 .enlace-desplegable:hover .arrow-down {
