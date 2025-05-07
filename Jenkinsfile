@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         NODE_ENV = 'production'
-        DEPLOY_DIR = '/var/www/frontend' // Cambia esta ruta si tu destino local es diferente
+        DEPLOY_DIR = 'C:\\deploy\\frontend' // Cambia esta ruta a donde quieres copiar los archivos
     }
 
     stages {
@@ -16,7 +16,7 @@ pipeline {
         stage('Instalar dependencias') {
             steps {
                 dir('PRODUCCION/Frontend') {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage('Construir proyecto') {
             steps {
                 dir('PRODUCCION/Frontend') {
-                    sh 'npm run build'
+                    bat 'npm run build'
                 }
             }
         }
@@ -32,12 +32,11 @@ pipeline {
         stage('Desplegar en entorno local') {
             steps {
                 script {
-                    // Asegúrate de tener permisos para esta operación
-                    def outputPath = "${env.WORKSPACE}/PRODUCCION/Frontend/dist"
-                    sh """
-                        sudo rm -rf ${DEPLOY_DIR}
-                        sudo mkdir -p ${DEPLOY_DIR}
-                        sudo cp -r ${outputPath}/* ${DEPLOY_DIR}/
+                    def outputPath = "${env.WORKSPACE}\\PRODUCCION\\Frontend\\dist"
+                    bat """
+                        if exist "${DEPLOY_DIR}" rmdir /s /q "${DEPLOY_DIR}"
+                        mkdir "${DEPLOY_DIR}"
+                        xcopy /E /I /Y "${outputPath}" "${DEPLOY_DIR}"
                     """
                 }
             }
