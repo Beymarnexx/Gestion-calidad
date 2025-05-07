@@ -1,10 +1,8 @@
 <template>
     <div class="admin-dashboard">
       <h1 class="welcome-message">🎭 Lista de Roles</h1>
-  
       <div class="admin-info">
         <h2>📋 Roles Registrados</h2>
-  
         <!-- 🔍 Barra de búsqueda -->
         <input
           type="text"
@@ -12,7 +10,6 @@
           placeholder="Escribe un nombre de rol para buscar..."
           class="search-bar"
         />
-  
         <table class="admin-info-table" v-if="rolesFiltrados.length > 0">
           <thead>
             <tr>
@@ -30,15 +27,12 @@
             </tr>
           </tbody>
         </table>
-  
         <p v-else class="no-data">❌ No hay roles registrados.</p>
       </div>
     </div>
   </template>
-  
   <script>
   import axios from "axios";
-  
   export default {
     data() {
       return {
@@ -58,9 +52,7 @@
       async cargarRoles() {
         try {
           const response = await axios.get("http://localhost:3001/api/rol/all", { withCredentials: true });
-  
           console.log("📩 Datos de roles recibidos:", response.data);
-  
           if (Array.isArray(response.data)) {
             this.roles = response.data;
           } else if (response.data.roles && Array.isArray(response.data.roles)) {
@@ -68,7 +60,6 @@
           } else {
             console.error("⚠️ Estructura inesperada de respuesta:", response.data);
           }
-  
           console.log("✅ Roles cargados:", this.roles);
         } catch (error) {
           console.error("❌ Error al cargar roles:", error);
@@ -80,10 +71,8 @@
     }
   };
   </script>
-  
   <style scoped>
   @import "@/assets/adminStyles.css";
-  
   /* 🔍 Estilo de la barra de búsqueda */
   .search-bar {
     width: 100%;
@@ -93,7 +82,6 @@
     border-radius: 5px;
     margin-bottom: 15px;
   }
-  
   /* ❌ Estilo para cuando no hay datos */
   .no-data {
     text-align: center;
