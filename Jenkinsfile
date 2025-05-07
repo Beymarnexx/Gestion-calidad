@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         NODE_ENV = 'production'
-        DEPLOY_DIR = 'C:\\deploy\\frontend' // Cambia esta ruta a donde quieres copiar los archivos
+        DEPLOY_DIR = 'C:\\deploy\\frontend' // Cambia esta ruta si lo deseas
     }
 
     stages {
@@ -24,7 +24,7 @@ pipeline {
         stage('Construir proyecto') {
             steps {
                 dir('PRODUCCION/Frontend') {
-                    bat 'npm run build'
+                    bat 'npx vite build'
                 }
             }
         }
@@ -36,7 +36,7 @@ pipeline {
                     bat """
                         if exist "${DEPLOY_DIR}" rmdir /s /q "${DEPLOY_DIR}"
                         mkdir "${DEPLOY_DIR}"
-                        xcopy /E /I /Y "${outputPath}" "${DEPLOY_DIR}"
+                        xcopy /E /I /Y "${outputPath}" "${DEPLOY_DIR}\\"
                     """
                 }
             }
@@ -45,10 +45,10 @@ pipeline {
 
     post {
         success {
-            echo 'Despliegue realizado correctamente.'
+            echo '✅ Despliegue realizado correctamente.'
         }
         failure {
-            echo 'El pipeline ha fallado.'
+            echo '❌ El pipeline ha fallado.'
         }
     }
 }
