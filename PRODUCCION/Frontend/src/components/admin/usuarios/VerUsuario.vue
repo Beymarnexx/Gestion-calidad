@@ -1,10 +1,8 @@
 <template>
   <div class="admin-dashboard">
     <h1 class="welcome-message">👥 Lista de Usuarios</h1>
-
     <div class="admin-info">
       <h2>Usuarios Registrados</h2>
-
       <table class="admin-info-table" v-if="usuarios.length > 0">
         <thead>
           <tr>
@@ -31,12 +29,10 @@
           </tr>
         </tbody>
       </table>
-
       <p v-else class="no-data">❌ No hay usuarios registrados.</p>
     </div>
   </div>
 </template>
-
 <script>
 import axios from "axios";
 
@@ -50,9 +46,7 @@ export default {
     async cargarUsuarios() {
       try {
         const response = await axios.get("http://localhost:3001/api/usuario/all", { withCredentials: true });
-
         console.log("📥 Respuesta de la API:", response.data);
-
         // 🔍 Verificar si los datos vienen en `response.data.usuarios` o directamente en `response.data`
         if (Array.isArray(response.data)) {
           this.usuarios = response.data; // Si es un array, se asigna directamente
@@ -73,10 +67,8 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 @import "@/assets/adminStyles.css";
-
 /* Estilo para cuando no hay datos */
 .no-data {
   text-align: center;
@@ -84,7 +76,6 @@ export default {
   font-size: 1.2em;
   margin-top: 20px;
 }
-
 /* Estilo para el estado de usuario */
 .blocked {
   color: red;
