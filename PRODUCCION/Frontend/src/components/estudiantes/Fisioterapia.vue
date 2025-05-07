@@ -6,7 +6,6 @@
   <img src="@/assets/FOTOS SELEC UAC PUCARANI/FOTOS FISOTERAPIA/20241008_135438.jpg" alt="Banner de la carrera de Fisioterapia y Kinesiología">
   <h1 class="banner-title">Carrera de Fisioterapia y Kinesiología</h1>
 </section>
-
     <section class="informacion">
       <div class="content-info">
         <h1>Licenciatura en Fisioterapia y Kinesiología</h1>
@@ -70,7 +69,6 @@
     </section>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -146,14 +144,12 @@ body {
   overflow: hidden;
   height: 400px; /* Ajusta la altura según tus necesidades */
 }
-
 .banner-fisioterapia img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.5); /* Oscurece la imagen para mejorar la visibilidad del texto */
 }
-
 .banner-title {
   position: absolute;
   top: 50%;
@@ -165,17 +161,14 @@ body {
   z-index: 1;
   font-weight: bold;
 }
-
 @media (max-width: 768px) {
   .banner-fisioterapia {
     height: 300px; /* Ajusta la altura para pantallas más pequeñas */
   }
-
   .banner-title {
     font-size: 2em; /* Reduce el tamaño de fuente en pantallas pequeñas */
   }
 }
-
 .informacion {
   display: flex;
   flex-direction: column;
@@ -186,25 +179,21 @@ body {
   border-radius: 10px;
   text-align: center; /* Centra el texto dentro del div */
 }
-
 .content-info h1 {
   font-size: 2em;
   margin-bottom: 15px;
   color: #2c3e50;
 }
-
 .content-info p {
   font-size: 1em;
   line-height: 1.6;
   color: #34495e;
 }
-
 .content-img {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-
 .content-img img {
   width: 100%;
   height: auto;
@@ -212,7 +201,6 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 450px; /* Agranda la imagen */
 }
-
 @media (min-width: 768px) {
   .informacion {
     flex-direction: row;
@@ -224,7 +212,6 @@ body {
     flex: 1;
   }
 }
-
 .mas-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -271,7 +258,6 @@ body {
   font-size: 1.8em;
   margin-bottom: 20px;
   text-align: center;
-  
 }
 .info-grid {
   display: grid;
