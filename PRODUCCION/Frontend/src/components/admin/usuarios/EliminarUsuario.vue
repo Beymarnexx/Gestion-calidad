@@ -1,10 +1,8 @@
 <template>
     <div class="admin-dashboard">
       <h1 class="welcome-message">🗑️ Eliminar Usuario</h1>
-  
       <div class="admin-info">
         <h2>Usuarios Registrados</h2>
-  
         <table class="admin-info-table">
           <thead>
             <tr>
@@ -26,7 +24,6 @@
       </div>
     </div>
   </template>
-  
   <script>
   import axios from "axios";
   
@@ -60,10 +57,8 @@
     },
   };
   </script>
-  
   <style scoped>
   @import "@/assets/adminStyles.css";
-  
   .delete-button {
     background: red;
     color: white;
@@ -72,7 +67,6 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
   .delete-button:hover {
     background: darkred;
   }
